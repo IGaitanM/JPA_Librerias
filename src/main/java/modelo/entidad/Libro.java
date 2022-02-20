@@ -19,24 +19,24 @@ public class Libro {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_libro;
+	private int id;
 	private String titulo;
 	private double precio;
 	
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	// Relacion de "uno a muchos", la FK siempre esta en el lado de "Muchos"
 	// @JoinColumn siempre estará en este lado en este tipo de relaciones
-	@JoinColumn(name="fk_id_editorial", referencedColumnName="id_editorial")
+	@JoinColumn(name="fk_id_editorial", referencedColumnName="id")
 	private Editorial editorial;
 	
 	@ManyToOne
-	@JoinColumn(name="fk_id_autor", referencedColumnName="id_autor")
+	@JoinColumn(name="fk_id_autor", referencedColumnName="id")
 	private Autor autor;
 	
 	@ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "libros_en_librerias",
-            joinColumns = @JoinColumn(name = "fk_id_libro", referencedColumnName = "id_libro"), 
-            inverseJoinColumns = @JoinColumn(name = "fk_id_libreria", referencedColumnName = "id_libreria"))
+            joinColumns = @JoinColumn(name = "fk_id_libro", referencedColumnName = "id"), 
+            inverseJoinColumns = @JoinColumn(name = "fk_id_libreria", referencedColumnName = "id"))
     private List<Libreria> librerias;
 
 
@@ -54,12 +54,12 @@ public class Libro {
 
 
 	public int getId_libro() {
-		return id_libro;
+		return id;
 	}
 
 
 	public void setId_libro(int id_libro) {
-		this.id_libro = id_libro;
+		this.id = id_libro;
 	}
 
 
@@ -115,7 +115,7 @@ public class Libro {
 
 	@Override
 	public String toString() {
-		return "Libro [id_libro=" + id_libro + ", titulo=" + titulo + ", precio=" + precio + ", editorial=" + editorial
+		return "Libro [id_libro=" + id + ", titulo=" + titulo + ", precio=" + precio + ", editorial=" + editorial
 				+ ", autor=" + autor + ", librerias=" + librerias + "]";
 	}
 	

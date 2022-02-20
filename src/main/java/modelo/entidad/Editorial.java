@@ -16,7 +16,7 @@ public class Editorial {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_editorial;
+	private int id;
 	private String nombre;
 	private String direcion;
 	
@@ -37,11 +37,11 @@ public class Editorial {
 	}
 
 	public int getId_editorial() {
-		return id_editorial;
+		return id;
 	}
 
 	public void setId_editorial(int id_editorial) {
-		this.id_editorial = id_editorial;
+		this.id = id_editorial;
 	}
 
 	public String getNombre() {
@@ -70,7 +70,7 @@ public class Editorial {
 
 	@Override
 	public String toString() {
-		return "Editorial [id_editorial=" + id_editorial + ", nombre=" + nombre + ", direcion=" + direcion + ", libros="
+		return "Editorial [id_editorial=" + id + ", nombre=" + nombre + ", direcion=" + direcion + ", libros="
 				+ libros + "]";
 	}
 

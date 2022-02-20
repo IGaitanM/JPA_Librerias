@@ -106,24 +106,24 @@ public class DaoTablas {
 		planeta.setLibros(librosPlaneta);
 		
 		
-		daoAutor.insertar(brandon);
-		daoAutor.insertar(carlos);
+//		daoAutor.insertar(brandon);
+//		daoAutor.insertar(carlos);
 		daoAutor.insertar(michael);
-		
-		daoLibro.insertar(elImperio);
-		daoLibro.insertar(elantris);
-		daoLibro.insertar(elCamino);
-		daoLibro.insertar(elJuego);
-		daoLibro.insertar(elPrisionero);
-		daoLibro.insertar(elLaberinto);
+//		
+//		daoLibro.insertar(elImperio);
+//		daoLibro.insertar(elantris);
+//		daoLibro.insertar(elCamino);
+//		daoLibro.insertar(elJuego);
+//		daoLibro.insertar(elPrisionero);
+//		daoLibro.insertar(elLaberinto);
 		daoLibro.insertar(laHistoria);
-		daoLibro.insertar(laSombra);
-		
-		daoLibreria.insertar(koreander);
-		daoLibreria.insertar(cementerio);
-		
-		daoEditorial.insertar(planeta);
-		daoEditorial.insertar(alfa);
+//		daoLibro.insertar(laSombra);
+//		
+//		daoLibreria.insertar(koreander);
+//		daoLibreria.insertar(cementerio);
+//		
+//		daoEditorial.insertar(planeta);
+//		daoEditorial.insertar(alfa);
 		
 	}
 	

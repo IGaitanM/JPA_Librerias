@@ -18,15 +18,15 @@ public class Libreria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_libreria;
+	private int id;
 	private String nombre;
 	private String nombre_dueño;
 	private String direcion;
 	
 	@ManyToMany(cascade=CascadeType.PERSIST)
 	@JoinTable(name="libros_en_librerias",
-			   joinColumns= { @JoinColumn(name="fk_id_libreria", referencedColumnName="id_libreria") }, 
-			   inverseJoinColumns= { @JoinColumn(name="fk_id_libro", referencedColumnName="id_libro")}) 
+			   joinColumns= { @JoinColumn(name="fk_id_libreria", referencedColumnName="id") }, 
+			   inverseJoinColumns= { @JoinColumn(name="fk_id_libro", referencedColumnName="id")}) 
 	private List<Libro> libros;
 	
 	public Libreria() {
@@ -42,11 +42,11 @@ public class Libreria {
 	}
 
 	public int getId_libreria() {
-		return id_libreria;
+		return id;
 	}
 
 	public void setId_libreria(int id_libreria) {
-		this.id_libreria = id_libreria;
+		this.id = id_libreria;
 	}
 
 	public String getNombre() {
@@ -83,7 +83,7 @@ public class Libreria {
 
 	@Override
 	public String toString() {
-		return "Libreria [id_libreria=" + id_libreria + ", nombre=" + nombre + ", nombre_dueño=" + nombre_dueño
+		return "Libreria [id_libreria=" + id + ", nombre=" + nombre + ", nombre_dueño=" + nombre_dueño
 				+ ", direcion=" + direcion + ", libros=" + libros + "]";
 	}
 	
